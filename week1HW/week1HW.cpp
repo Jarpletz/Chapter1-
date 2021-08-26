@@ -2,19 +2,15 @@
 //
 
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+   cout << "Bit: A single bianary value, the base of all computing information and storage."<<endl;
+   cout << "Byte: stores 8 bits, 2^8=256 possible values per bit; used to store number and letter values, as well as basic functions." << endl;
+   cout << "ex. '3' is stored as '00110011.'" << endl;
+   cout << "1 Kilobyte= 2^10 bytes" << endl;
+   cout << "1 Megabyte= 2^20 bytes= 2^10 KB" << endl;
+   cout << "1 Gigabyte= 2^30 bytes= 2^10 MB" << endl;
+   cout << "1 Terabyte= 2^40 bytes= 2^10 GB" << endl;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
