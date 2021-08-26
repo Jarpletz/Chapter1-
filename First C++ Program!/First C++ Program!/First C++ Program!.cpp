@@ -9,7 +9,7 @@ int main()
     cout << "Roses Are Red"<<endl;
     cout << "Violets Are Blue" << endl;
     cout << "This technically is coding" << endl;
-    cout << "and poetry too!\n\n";
+    cout << "and poetry too!!\n\n";
     return 0;
 }
 
