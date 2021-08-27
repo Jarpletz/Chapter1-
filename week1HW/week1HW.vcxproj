@@ -139,7 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="week1HW.cpp" />
+    <ClCompile Include="OutputBinaryDefs.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Algorithmic conversion.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
