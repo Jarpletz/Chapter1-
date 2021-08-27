@@ -11,6 +11,6 @@ int main()
    cout << "1 Kilobyte= 2^10 bytes" << endl;
    cout << "1 Megabyte= 2^20 bytes= 2^10 KB" << endl;
    cout << "1 Gigabyte= 2^30 bytes= 2^10 MB" << endl;
-   cout << "1 Terabyte= 2^40 bytes= 2^10 GB" << endl;
+   cout << "1 Terabyte= 2^40 bytes= 2^10 GB" << endl;  
 }
 
