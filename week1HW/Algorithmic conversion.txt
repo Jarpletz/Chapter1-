@@ -42,6 +42,33 @@ while(n>=0){
     convert testValue to Hex corresponding 0-15 digit, add digit to the right of the hex Output
 }
 
+Data Encription Algorithm:_________________
+* Note: I am drawing upon my limited previous knowledge of encription, most of which is from several years ago.
+I have never used any sort of RandomSeed, but to my knowledge (which may very well be flawed) this is how they work.
 
+Setup:
+-The Sender and the Reciever will each have a predetermined float set as their randomSeed,
+as well as a random predetermined start position in this random seed
 
+To Encode:
+int r= position in Random seed's sequence
+for(int i=0; i<characters in string; i++){
+    -convert char[i] into its corresponding base-10 ASCII value
+    -add a random number between 0 and 850, according to r in random seed (the resulting value will always be < 3 digits)
+    r++;
+    -if resulting value <100, add '0's to the left, such that each value has 3 digits (ex. 57= 057)
+    -add this byte to the string that will be sent to reciever
+}
+Once repeated for all characters, send numerical string to reciever.
 
+To decode:
+int r= position in Random seed's sequence- must be same as sender's initial r value
+-in order from left to right, devied recieved number sequence into groups of three
+for(int i=0; i<number of groups; i++){
+   -take the three digits in the group, convert to int to remove extra 0's (ex. 057 -> 57) 
+   -subtract a random number between 0 and 850, according to r in random seed (the resulting value will always be< 255)
+   Because they are subtracting a number determined by the same seed and starting place as the sender, they should get the original base-10 ASCII value. 
+   r++;
+   -convert resulting value to ASCII corresponding character, add to character string
+}
+returns: original message!
