@@ -51,24 +51,23 @@ Setup:
 as well as a random predetermined start position in this random seed
 
 To Encode:
-int r= position in Random seed's sequence
+int n= position in Random seed's sequence
 for(int i=0; i<characters in string; i++){
     -convert char[i] into its corresponding base-10 ASCII value
-    -add a random number between 0 and 850, according to r in random seed (the resulting value will always be < 3 digits)
-    r++;
-    -if resulting value <100, add '0's to the left, such that each value has 3 digits (ex. 57= 057)
-    -add this byte to the string that will be sent to reciever
+    -multiply by nth random number in random seed sequence 
+    n++;
+    -convert to string form, add space as right mosst character, add to right side of final string
 }
-Once repeated for all characters, send numerical string to reciever.
+Once repeated for all characters, send final string to reciever.
 
 To decode:
-int r= position in Random seed's sequence- must be same as sender's initial r value
--in order from left to right, devied recieved number sequence into groups of three
+int n= position in Random seed's sequence- must be same as sender's initial r value
+-in order from left to right, seperate number characters into groups, where a space indicates the start of a new character group
 for(int i=0; i<number of groups; i++){
-   -take the three digits in the group, convert to int to remove extra 0's (ex. 057 -> 57) 
-   -subtract a random number between 0 and 850, according to r in random seed (the resulting value will always be< 255)
+   -take the digits in the group, convert back to float
+   -devide by nth random number in random seed sequence 
    Because they are subtracting a number determined by the same seed and starting place as the sender, they should get the original base-10 ASCII value. 
-   r++;
+   n++;
    -convert resulting value to ASCII corresponding character, add to character string
 }
 returns: original message!
